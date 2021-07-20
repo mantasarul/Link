@@ -1,0 +1,12 @@
+{% extends 'search_app/base.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block content %}
+    <h1>Submit you entries:</h1>
+    <form action="/" method='POST'>
+        {% csrf_token %}
+        {{ form }}
+        <button type='submit' >Submit</button>
+    </form>
+{% endblock %}
